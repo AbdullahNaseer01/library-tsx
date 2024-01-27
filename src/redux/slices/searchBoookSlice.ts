@@ -1,4 +1,3 @@
-// searchSlice.ts
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 interface SearchBooksParams {

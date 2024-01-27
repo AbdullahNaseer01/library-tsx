@@ -1,4 +1,3 @@
-// monthSlice.ts
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 interface FetchMonthBooksParams {
@@ -11,9 +10,6 @@ interface MonthState {
   data: any | null;
   isError: boolean;
 }
-// const apikey = process.env.APIKEY
-// const apikey = import.meta.env.APIKEY
-
 export const fetchMonthBooks = createAsyncThunk(
   "fetchMonthBooks", // Correct action type
   async ({ startIndex, maxResults }: FetchMonthBooksParams) => {

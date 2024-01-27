@@ -14,7 +14,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
 import './index.css';
-import routes from './routes/routes.tsx'; // Import the routes file
+import routes from './routes/routes.tsx';
 import { store } from './redux/store.ts';
 import { Provider } from 'react-redux';
 
