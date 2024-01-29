@@ -37,8 +37,8 @@ const CardGrid: React.FC = () => {
 
   return (
     <>
-      <div className='searchHero mt-48 mb-16 text-center'>
-        <h1 className='text-5xl mb-16'>Search Books</h1>
+      <div className='searchHero mt-48 mb-16 text-center text-customTextColour'>
+        <h1 className='text-5xl font-bold italic mb-16 '>Search Books</h1>
         <div className="search w-[236px] h-[46px] md:w-[610px] md:h-[72px] border rounded-lg m-auto">
           <input
             type="text"
@@ -49,8 +49,8 @@ const CardGrid: React.FC = () => {
           />
         </div>
       </div>
-      <div className='text-center flex flex-col items-center justify-center'>
-        <h3 className='text-3xl mb-6 italic'>Search Results</h3>
+      <div className='text-center flex flex-col justify-center text-customTextColour'>
+        <h3 className='text-3xl font-bold mb-6 italic text-start'>Search Results</h3>
 
         {isLoading ? (
           <div className='flex justify-center'><Loader/></div>
