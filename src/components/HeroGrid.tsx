@@ -27,7 +27,8 @@ const HeroGrid: React.FC = () => {
   const books = data?.items || [];
 
   return (
-    <div className='flex flex-wrap gap-5 items-start justify-center lg:justify-start'>
+    <div className="main">
+<div className='flex flex-wrap gap-5 items-start justify-center lg:justify-start'>
       <div className='w-full md:w-2/3 md:mt-4'>
         <h1 className='font-bold italic text-4xl text-[#183B56] mb-5'>Recommended Books</h1>
         <div className='slider pt-8 md:pt-0 mt-5 md:mt-0 overflow-x-auto whitespace-nowrap mx-auto no-scrollbar md:flex md:flex-wrap gap-8'>
@@ -54,6 +55,9 @@ const HeroGrid: React.FC = () => {
       </div>
       <Aside />
     </div>
+    <hr className=' mt-16 mb-16 mx-[5%] ml-0' />
+    </div>
+    
   );
 };
 export default HeroGrid;
