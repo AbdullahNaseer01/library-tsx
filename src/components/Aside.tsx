@@ -18,8 +18,8 @@ const Aside: React.FC = () => {
 
   return (
     <aside className='text-center w-full md:w-1/4 p-4 flex flex-col items-center gap-5'>
-      <div>
-        <h1 className="font-bold italic text-4xl text-customTextColour mb-5">Best This Month</h1>
+        <h1 className="font-bold italic text-4xl text-customTextColour">Best This Month</h1>
+      <div className=' bg-slate-50 rounded-lg'>
         <div className='flex flex-col gap-5 items-center border-gray-200 p-4 rounded-md'>
           {asideBooks.map((book: any) => (
             <Link to={`/bookdetails/${book.id}`}>
@@ -36,7 +36,7 @@ const Aside: React.FC = () => {
         )}
         </div>
         <hr className='mx-7 my-4' />
-        <button className='block italic font-semibold mx-auto w-[350px] h-auto text-linkColour text-lg'>
+        <button className='block italic font-semibold mx-auto w-[350px] h-auto text-linkColour text-lg mb-6'>
           See More
         </button>
       </div>

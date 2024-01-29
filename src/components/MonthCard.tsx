@@ -58,7 +58,7 @@ const MonthCard: React.FC<CardProps> = ({ book }) => {
     const trimmedTitle = trimText(title || '', 5);
 
     return (
-        <div className="relative w-[270px] h-[312px] md:w-[300px] md:h-[260px] rounded-md md:flex md:flex-row border-2">
+        <div className="relative w-[270px] h-[312px] md:w-[300px] md:h-[260px] rounded-md md:flex md:flex-row border-2 md:border-0">
             <div className="absolute md:static w-[92px] h-[137px] left-20 top-[-30px] md:h-auto md:w-auto md:flex-1">
                 <img className=' bg-red-500 md:ml-2 w-full h-full md:h-2/3 object-cover md:mt-10 rounded-md' src={imageLinks?.thumbnail} alt="picture" />
             </div>
@@ -69,14 +69,7 @@ const MonthCard: React.FC<CardProps> = ({ book }) => {
 
                     <p className="text-linkColour italic text-sm md:mt-6 font-bold">{`$${maturityRating ? 'Not For Sale' : 'Price Not Available'}`}</p>
                 </div>
-                <div className="flex justify-between items-center mt-2 md:mt-3">
-                    <button className=" bg-customTextColour text-white text-sm px-4 py-2 rounded-full">Buy Now</button>
-                    <button className="pr-4 py-2 rounded-md">
-                        <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.79444 15.7841L16.5972 8.75993C18.5765 6.71737 18.4604 3.33534 16.2526 1.45095C14.3261 -0.190812 11.4609 0.10448 9.69251 1.9291L8.99992 2.64276L8.30734 1.9291C6.54249 0.10448 3.67376 -0.190812 1.74721 1.45095C-0.460588 3.33534 -0.576631 6.71737 1.39915 8.75993L8.20187 15.7841C8.64132 16.2377 9.35499 16.2377 9.79444 15.7841Z" fill="#959EAD" />
-                        </svg>
-                    </button>
-                </div>
+                    <button className=" bg-customTextColour text-white text-sm px-4 py-2 w-[101px] h-9 rounded-full">Buy Now</button>
             </div>
         </div>
     );
