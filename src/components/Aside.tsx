@@ -18,7 +18,7 @@ const Aside: React.FC = () => {
 
   return (
     <aside className='text-center w-full md:w-1/4 p-4 flex flex-col items-center md:items-start  gap-5'>
-        <h1 className="font-bold italic text-4xl text-customTextColour">Best This Month</h1>
+        <h1 className="font-bold italic text-4xl text-customTextColour">Best this Month</h1>
       <div className=' bg-slate-50 rounded-lg'>
         <div className='flex flex-col gap-5 items-center border-gray-200 p-4 rounded-md'>
           {asideBooks.map((book: any) => (

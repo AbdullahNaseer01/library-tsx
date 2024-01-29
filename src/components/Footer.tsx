@@ -5,7 +5,7 @@ import heart from '../assets/heart.svg'
 const Footer: React.FC = () => {
 
   return (
-    <div className="relative mt-16 ">
+    <div className="relative mt-16 font-sans ">
       <div className="">
         <div className="grid gap-16 row-gap-10 mb-8 lg:grid-cols-6">
           <div className="md:max-w-md lg:col-span-2 hidden md:block">
