@@ -1,4 +1,5 @@
 import logo from "../assets/logo.svg";
+import heart from '../assets/heart.svg'
 
 
 const Footer: React.FC = () => {
@@ -100,7 +101,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
-            {/* services */}
+              {/* services */}
               <h3 className="font-semibold tracking-wide text-teal-accent-400">
                 Services
               </h3>
@@ -148,7 +149,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
-            {/* company */}
+              {/* company */}
               <h3 className="font-semibold tracking-wide text-teal-accent-400">
                 Company
               </h3>
@@ -196,7 +197,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div>
-            {/* More */}
+              {/* More */}
               <h3 className="font-semibold tracking-wide text-teal-accent-400">
                 More
               </h3>
@@ -288,11 +289,9 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col justify-center pt-5 pb-10 border-t border-deep-purple-accent-200 sm:flex-row">
-          {/* <span>
-            heart
-          </span> */}
-          <p className="text-sm ">
+        <div className=" md:flex flex-col justify-center items-center mt-2 mb-[60px] hidden">
+          <img src={heart} alt="" />
+          <p className="text-sm mt-8">
             Copyright © 2019. Crafted with love.
           </p>
         </div>
