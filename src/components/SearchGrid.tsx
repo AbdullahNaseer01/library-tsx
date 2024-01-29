@@ -49,7 +49,7 @@ const CardGrid: React.FC = () => {
           />
         </div>
       </div>
-      <div className='text-center flex flex-col justify-center text-customTextColour'>
+      <div className='text-center flex flex-col justify-center items-center text-customTextColour'>
         <h3 className='text-3xl font-bold mb-6 italic text-start'>Search Results</h3>
 
         {isLoading ? (
