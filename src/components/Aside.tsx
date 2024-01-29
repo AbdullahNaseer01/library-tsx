@@ -36,9 +36,12 @@ const Aside: React.FC = () => {
         )}
         </div>
         <hr className='mx-7 my-4' />
+        <Link to={"/search"}>
         <button className='block italic font-semibold mx-auto w-[350px] h-auto text-linkColour text-lg mb-6'>
           See More
         </button>
+        </Link>
+        
       </div>
     </aside>
   );
