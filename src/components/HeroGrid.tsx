@@ -47,7 +47,7 @@ const HeroGrid: React.FC = () => {
         ) : (
           <button
             onClick={loadMoreResults}
-            className='block mx-auto w-64 h-12 md:h-16 md:w-[70%] text-[#1565D8] text-md font-bold rounded-md mt-6 bg-[#b5cef0]'
+            className='block mx-auto md:mx-0 w-64 h-12 md:h-16 md:w-[91%] text-[#1565D8] text-md font-bold rounded-md mt-6 bg-[#b5cef0]'
           >
             See More
           </button>
