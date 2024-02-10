@@ -2,6 +2,9 @@ export interface Book {
     id: string;
     volumeInfo?: {
         title?: string;
+        subtitle?: string;
+        description?: string;
+        previewLink?: string;
         authors?: string[];
         publishedDate?: string;
         pageCount?: number;
@@ -10,6 +13,7 @@ export interface Book {
         imageLinks?: {
             smallThumbnail?: string;
             thumbnail?: string;
-        };
+        }
+
     };
 }
