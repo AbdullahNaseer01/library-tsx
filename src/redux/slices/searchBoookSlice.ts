@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-// import { SearchBooksParams, SearchState } from "../../Types/types";
 import {Book} from "../../Types/types"
 
 
@@ -54,3 +53,6 @@ const searchSlice = createSlice({
 });
 
 export default searchSlice.reducer;
+
+
+
