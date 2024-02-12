@@ -1,6 +1,6 @@
-import { createSlice, createAsyncThunk, PayloadAction } from "@reduxjs/toolkit";
-import {Book} from "../../Types/types"
-
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
+import { Book } from "../../Types/types";
 
 interface BooksResponse {
   kind: string;
@@ -8,27 +8,26 @@ interface BooksResponse {
   items: Book[];
 }
 
-// Fetch books action with type parameters
 interface FetchBooksParams {
   startIndex: number;
   maxResults: number;
 }
 
-// Books state with specific data type
 interface BooksState {
   isLoading: boolean;
-  data: BooksResponse | null; // Use the BooksResponse type
+  data: BooksResponse | null;
   isError: boolean;
 }
 
 export const fetchBooks = createAsyncThunk<BooksResponse, FetchBooksParams>(
   "fetchBooks",
   async ({ startIndex, maxResults }: FetchBooksParams) => {
-    const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes?q=science:keyes&startIndex=${startIndex}&maxResults=${maxResults}&key=${import.meta.env.VITE_APIKEY}`
-    );
-    const data = await response.json();
-    return data;
+    try {
+      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=science:keyes&startIndex=${startIndex}&maxResults=${maxResults}&key=${import.meta.env.VITE_APIKEY}`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 );
 
@@ -43,18 +42,18 @@ const booksSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchBooks.pending, (state) => {
-      state.isLoading = true;
-    });
-    builder.addCase(fetchBooks.rejected, (state, action) => {
-      state.isLoading = false;
-      state.isError = true;
-      console.log("error", (action.payload as PayloadAction));
-    });
-    builder.addCase(fetchBooks.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.data = action.payload as BooksResponse; // Type assertion
-    });
+    builder
+      .addCase(fetchBooks.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+      })
+      .addCase(fetchBooks.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.data = action.payload;
+      });
   },
 });
 

@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import axios from "axios";
 import { Book } from "../../Types/types"; // Import the Book interface
 
 interface FetchBookDetailsParams {
@@ -14,11 +15,12 @@ interface BookDetailsState {
 export const fetchBookDetails = createAsyncThunk<Book, FetchBookDetailsParams>( // Define return type as Book
   "bookDetails/fetchBookDetails",
   async ({ id }: FetchBookDetailsParams) => {
-    const response = await fetch(
-      `https://www.googleapis.com/books/v1/volumes/${id}`
-    );
-    const data: Book = await response.json(); // Parse response as Book
-    return data;
+    try {
+      const response = await axios.get(`https://www.googleapis.com/books/v1/volumes/${id}`);
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
   }
 );
 
@@ -33,17 +35,18 @@ const bookDetailsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchBookDetails.pending, (state) => {
-      state.isLoading = true;
-    });
-    builder.addCase(fetchBookDetails.rejected, (state) => {
-      state.isLoading = false;
-      state.isError = true;
-    });
-    builder.addCase(fetchBookDetails.fulfilled, (state, action) => {
-      state.isLoading = false;
-      state.data = action.payload;
-    });
+    builder
+      .addCase(fetchBookDetails.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchBookDetails.rejected, (state) => {
+        state.isLoading = false;
+        state.isError = true;
+      })
+      .addCase(fetchBookDetails.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.data = action.payload;
+      });
   },
 });
 
