@@ -37,7 +37,6 @@ const Navbar: React.FC = () => {
           <img src={hamBurger} alt="Logo" className="mr-4" />
         </button>
       </div>
-      {/* Menu for larger screens or when the menu is open on small screens */}
       <div
         className={`${isMenuOpen ? 'flex flex-col' : 'hidden'
           } md:flex md:flex-row md:space-x-12 mt-3 md:mt-0 transition-all ease-in-out duration-300`}

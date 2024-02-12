@@ -23,13 +23,13 @@ const RelatedBook: React.FC = () => {
 
   const scrollLeft = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollLeft -= 200; // Adjust the scroll amount as needed
+      sliderRef.current.scrollLeft -= 200; 
     }
   };
 
   const scrollRight = () => {
     if (sliderRef.current) {
-      sliderRef.current.scrollLeft += 200; // Adjust the scroll amount as needed
+      sliderRef.current.scrollLeft += 200;
     }
   };
 
