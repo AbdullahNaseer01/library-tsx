@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {Book} from "../Types/types"
+import {Book} from "../types/types"
 
 interface CardProps {
     book: Book;

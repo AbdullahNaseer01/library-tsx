@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '../redux/store';
-import { fetchBooks } from '../redux/slices/books';
+import { fetchBooks } from '../redux/slices/booksSlice';
 import Card from './Card';
 import Aside from './Aside';
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
-import {Book} from "../Types/types"
+import {Book} from "../types/types"
 
 const HeroGrid: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();

@@ -8,7 +8,7 @@ import Navbar from '../components/Navbar';
 import RelatedBook from '../components/RelatedBook';
 import Footer from '../components/Footer';
 import Loader from '../components/Loader';
-import {Book} from "../Types/types"
+import {Book} from "../types/types"
 
 const BookDetails: React.FC = () => {
   const { id } = useParams<{ id?: string }>();

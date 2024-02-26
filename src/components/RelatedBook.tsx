@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../redux/store';
-import { fetchBooks } from '../redux/slices/books';
+import { fetchBooks } from '../redux/slices/booksSlice';
 import { Link } from 'react-router-dom';
 import arrowLeft from '../assets/arrowLeft.svg';
 import arrowRight from '../assets/arrowRight.svg';

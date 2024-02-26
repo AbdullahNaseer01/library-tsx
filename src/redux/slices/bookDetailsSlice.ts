@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Book } from "../../Types/types"; // Import the Book interface
+import { Book } from "../../types/types"; // Import the Book interface
 
 interface FetchBookDetailsParams {
   id: string;

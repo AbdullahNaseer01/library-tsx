@@ -6,7 +6,7 @@ import { searchBooks } from "../redux/slices/searchBoookSlice";
 import Card from "./Card";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
-import { Book } from "../Types/types";
+import { Book } from "../types/types";
 
 const SearchGrid: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();

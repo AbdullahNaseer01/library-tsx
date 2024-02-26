@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-import { Book } from "../../Types/types";
+import { Book } from "../../types/types";
 
 interface FetchMonthBooksParams {
   startIndex: number;

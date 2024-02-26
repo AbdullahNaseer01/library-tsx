@@ -5,7 +5,7 @@ import { fetchMonthBooks } from '../redux/slices/monthSlice';
 import MonthCard from './MonthCard';
 import Loader from './Loader';
 import { Link } from 'react-router-dom';
-import { Book } from "../Types/types";
+import { Book } from "../types/types";
 
 const Aside: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
