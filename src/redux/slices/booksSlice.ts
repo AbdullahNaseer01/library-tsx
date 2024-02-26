@@ -46,7 +46,7 @@ const booksSlice = createSlice({
       .addCase(fetchBooks.pending, (state) => {
         state.isLoading = true;
       })
-      .addCase(fetchBooks.rejected, (state, action) => {
+      .addCase(fetchBooks.rejected, (state) => {
         state.isLoading = false;
         state.isError = true;
       })
